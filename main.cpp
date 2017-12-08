@@ -5,7 +5,7 @@
 #include "BControl.h"
 
 CBForm form(ID_Dialog);
-
+//change
 void cmd_cancel();
 /*
 class Th: public CThreading
