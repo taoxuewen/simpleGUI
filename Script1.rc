@@ -2,6 +2,11 @@
 //
 #include "resource.h"
 
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
 #define APSTUDIO_READONLY_SYMBOLS
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -26,13 +31,21 @@ LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
 // Dialog
 //
 
-ID_Dialog DIALOG DISCARDABLE  0, 0, 187, 96
+ID_Dialog DIALOGEX 0, 0, 327, 186
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Dialog"
 FONT 10, "System"
 BEGIN
-    PUSHBUTTON      "Cancel",ID_BtCANCEL,130,24,50,14
-    LTEXT           "",ID_label,53,38,46,15
+    PUSHBUTTON      "开始",ID_Btstart,210,165,50,14
+    CONTROL         "动作个数",ID_Motornums,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_CENTERIMAGE | WS_GROUP,234,7,41,13,0,HID_Motornums
+    CONTROL         "",ID_motor,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,119,79,
+                    153,18
+    PUSHBUTTON      "结束",ID_end,270,165,50,14
+    LTEXT           "5",IDC_STATIC,275,10,16,16
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_ARROWKEYS,238,
+                    164,10,14
+    LTEXT           "",ID_flag,137,171,65,8
 END
 
 
@@ -47,9 +60,9 @@ BEGIN
     ID_Dialog, DIALOG
     BEGIN
         LEFTMARGIN, 7
-        RIGHTMARGIN, 180
+        RIGHTMARGIN, 320
         TOPMARGIN, 7
-        BOTTOMMARGIN, 89
+        BOTTOMMARGIN, 179
     END
 END
 #endif    // APSTUDIO_INVOKED
