@@ -31,3 +31,4 @@ private:
 	TIMERPROC m_pFuncCallBack;
 	bool m_blEnabled;
 };
+//我是
